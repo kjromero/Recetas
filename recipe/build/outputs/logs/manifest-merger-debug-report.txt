@@ -1,0 +1,35 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:2:1-12:12
+INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:2:1-12:12
+INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:2:1-12:12
+	package
+		ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:2:12-70
+application
+ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:5:5-10:19
+activity#com.kenny.recipe.RecipeActivity
+ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:6:9-9:54
+	android:screenOrientation
+		ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:8:13-49
+	android:theme
+		ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:9:13-51
+	android:name
+		ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml:7:13-43
+uses-sdk
+INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\AndroidManifest.xml

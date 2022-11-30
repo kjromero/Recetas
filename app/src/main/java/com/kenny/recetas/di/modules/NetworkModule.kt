@@ -12,9 +12,18 @@ import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
+const val BASE_URL = "https://api.spoonacular.com/"
+
 @InstallIn(SingletonComponent::class)
 @Module
 object NetworkModule {
+
+    @Provides
+    @Singleton
+    @BasePath
+    fun providesBasePath(): String {
+        return BASE_URL
+    }
 
     @Provides
     @Singleton

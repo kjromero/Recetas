@@ -16,12 +16,6 @@ class RecipeRepositoryImpl @Inject constructor(
         return recipeService.getRecipes().map { response -> response.recipes.map { it.toBaseModel() } }
     }
 
-    private fun RecipesResponse.toBaseModel(): Recipes {
-        return Recipes(
-            recipes = recipes.map { it.toBaseModel() }
-        )
-    }
-
     private fun RecipeResponse.toBaseModel(): Recipe {
         return Recipe(
             id = id,

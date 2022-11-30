@@ -1,0 +1,4 @@
+C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\java\com\kenny\recipe\uimodels\RecipeUiModel.kt
+C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\java\com\kenny\recipe\viewmodels\RecipeViewModel.kt
+C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\java\com\kenny\recipe\RecipeActivity.kt
+C:\Users\Manuel Gomez\AndroidStudioProjects\Recetas\recipe\src\main\java\com\kenny\recipe\components\RecipeList.kt
