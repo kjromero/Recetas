@@ -12,8 +12,14 @@ import javax.inject.Inject
 class RecipeRepositoryImpl @Inject constructor(
     private val recipeService: RecipeService
 ) : RecipeRepository {
-    override fun getRecipes(): Single<List<Recipe>> {
-        return recipeService.getRecipes().map { response -> response.recipes.map { it.toBaseModel() } }
+    override fun getRecipes(): Single<Recipes> {
+        return recipeService.getRecipes().map { response -> response.toBaseModel() }
+    }
+
+    private fun RecipesResponse.toBaseModel(): Recipes {
+        return Recipes(
+            recipes = recipes.map { it.toBaseModel() }
+        )
     }
 
     private fun RecipeResponse.toBaseModel(): Recipe {

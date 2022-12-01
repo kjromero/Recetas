@@ -1,21 +1,33 @@
 package com.kenny.recipe.components
 
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import com.kenny.components.compose.theme.Background
-import com.kenny.recipe.uimodels.RecipeUiModel
-import java.lang.reflect.Modifier
+import com.kenny.recipe.uimodels.RecipesUiModel
+import com.kenny.components.compose.theme.Primary
+
 
 @Composable
 fun RecipeList(
-    uiState: RecipeUiModel,
+    uiState: RecipesUiModel,
 ) {
     Surface(
         color = Background,
-        modifier = Modifier.fillMaxSize()
     ) {
-        items(
-
-        )
+       uiState.recipeModels.forEach { recipe ->
+           Row {
+               Text(
+                   text = recipe.id.toString(),
+                   color = Primary,
+               )
+               Text(
+                   text = recipe.id.toString(),
+                   color = Primary,
+               )
+           }
+      
+       }
     }
 }

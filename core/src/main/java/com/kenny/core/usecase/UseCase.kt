@@ -1,4 +1,4 @@
-package com.kenny.recipe.interfaces
+package com.kenny.core.usecase
 
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Observable
