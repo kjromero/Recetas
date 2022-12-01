@@ -1,11 +1,11 @@
 # Recetas
 App para buscar recetas
 
-#RecipeApp
+# RecipeApp
 
 App para buscar recetas
 
-##Arquitectura:
+## Arquitectura:
 
 En este proyecto se usa Clean-Architecture de la siguiente manera:
 
@@ -17,14 +17,14 @@ También se implementa el patrón de diseño MVVM de la siguiente forma
 
 ![0_5eJUx2N-5IKoIJNO](https://user-images.githubusercontent.com/11460880/205169220-6a30eabf-869c-48a9-af1f-aef15e56bbc7.png)
 
-##Librerías:
+## Librerías:
 
 - Hilt: Se uso para el manejo de inyección de dependencias
 - RxJava: Se uso para el manejo de Observer.
 - Retrofit2: Se uso para las peticiones HTTP/llamados al API
 - Moshi: Se uso para el manejo de JSON
 
-##Dificultades
+## Dificultades
 
 En este proyecto se presentaros dos dificultades:
 
