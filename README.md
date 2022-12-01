@@ -19,15 +19,16 @@ Tambien se implementa el patron de diseño MVVM de la siguiente forma
 
 Librerías:
 
-Hilt: Se uso para el manejo de inyección de dependencias
-RxJava: Se uso para el manejo de Observer.
-Retrofit2: Se uso para las peticiones HTTP/llamados al API
-Moshi: Se uso para el manejo de JSON
+- Hilt: Se uso para el manejo de inyección de dependencias
+- RxJava: Se uso para el manejo de Observer.
+- Retrofit2: Se uso para las peticiones HTTP/llamados al API
+- Moshi: Se uso para el manejo de JSON
+
 Dificultades
 
 En este proyecto se presentaros dos dificultades:
 
-El manejo para inyectar las interfaces de los UseCases se intento realizando binding. Esto no funciono
-La librería Moshi no nos genero el JsonAdapter de nuestro modelo de respuesta del API
+1. El manejo para inyectar las interfaces de los UseCases se intento realizando binding. Esto no funciono
+2. La librería Moshi no nos genero el JsonAdapter de nuestro modelo de respuesta del API
 
 
