@@ -14,3 +14,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Recetas"
 include ':app'
+include ':recipe'
+include ':recipe-entities'
+include ':recipe-domain'
+include ':components'
+include ':core'
