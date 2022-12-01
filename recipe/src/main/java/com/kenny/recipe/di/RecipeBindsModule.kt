@@ -19,14 +19,5 @@ import dagger.hilt.android.components.ViewModelComponent
 @Module
 abstract class RecipeBindsModule {
 
-    @Binds
-    @GetRecipes
-    abstract fun bindsGetRecipesUseCase(getRecipesUseCase: GetRecipesUseCase): SingleUseCase<Unit, List<Recipe>>
-
-    @Binds
-    @MapRecipesDataToRecipeUiModel
-    abstract fun bindsMapRecipesToRecipesUiModelUseCase(
-        mapRecipesDataToRecipeUiModelUseCase: MapRecipesDataToRecipeUiModelUseCase
-    ): SingleUseCase<Recipes, RecipesUiModel>
 
 }

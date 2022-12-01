@@ -5,7 +5,7 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class RecipesResponse(
-    @Json(name = "results") val recipes: List<RecipeResponse>,
+    @Json(name = "results") val results: List<RecipeResponse>,
 )
 
 @JsonClass(generateAdapter = true)

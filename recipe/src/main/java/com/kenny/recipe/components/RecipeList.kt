@@ -2,7 +2,7 @@ package com.kenny.recipe.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Surface
-import androidx.compose.material3.Text
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import com.kenny.components.compose.theme.Background
 import com.kenny.recipe.uimodels.RecipesUiModel
@@ -16,7 +16,7 @@ fun RecipeList(
     Surface(
         color = Background,
     ) {
-       uiState.recipeModels.forEach { recipe ->
+       uiState.recipes.forEach { recipe ->
            Row {
                Text(
                    text = recipe.id.toString(),

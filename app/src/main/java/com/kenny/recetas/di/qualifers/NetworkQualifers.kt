@@ -7,3 +7,6 @@ annotation class RetrofitBasic
 
 @Qualifier
 annotation class BasePath
+
+@Qualifier
+annotation class RetrofitRecipes

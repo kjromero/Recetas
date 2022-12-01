@@ -8,6 +8,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.core.view.WindowCompat
 import com.kenny.components.compose.theme.RecipeTheme
+import com.kenny.recipe.components.RecipeList
 import com.kenny.recipe.viewmodels.RecipeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,11 +26,10 @@ class RecipeActivity : AppCompatActivity() {
             val uiState by viewModel.data.observeAsState()
 
             RecipeTheme {
-
+                RecipeList(uiState = uiState!!)
             }
 
         }
-
+        viewModel.getRecipes()
     }
-
 }

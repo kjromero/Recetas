@@ -6,6 +6,8 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="33" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application>
         <activity
             android:name="com.kenny.recipe.RecipeActivity"
