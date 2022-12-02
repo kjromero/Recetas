@@ -4,14 +4,10 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.kenny.components.viewmodel.BaseViewModel
-import com.kenny.recipe.entities.data.Recipe
-import com.kenny.recipe.entities.qualifiers.GetRecipes
-import com.kenny.core.usecase.SingleUseCase
-import com.kenny.core.usecase.UseCase
+import com.kenny.recipe.domain.usecases.GetRecipeDetailUseCase
 import com.kenny.recipe.domain.usecases.GetRecipesUseCase
-import com.kenny.recipe.entities.data.Recipes
-import com.kenny.recipe.entities.qualifiers.MapRecipesDataToRecipeUiModel
-import com.kenny.recipe.uimodels.RecipeModel
+import com.kenny.recipe.uimodels.RecipeDetailModel
+import com.kenny.recipe.uimodels.RecipeScreen
 import com.kenny.recipe.uimodels.RecipesUiModel
 import com.kenny.recipe.usescases.MapRecipesDataToRecipeUiModelUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,6 +18,7 @@ import javax.inject.Inject
 @HiltViewModel
 class RecipeViewModel @Inject constructor(
     private val getRecipesUseCase: GetRecipesUseCase,
+    private val getRecipeDetailUseCase: GetRecipeDetailUseCase,
     private val mapRecipesDataToRecipesUiModel: MapRecipesDataToRecipeUiModelUseCase,
     ) : BaseViewModel() {
 
@@ -36,7 +33,8 @@ class RecipeViewModel @Inject constructor(
                 .doOnSubscribe {
                     _data.value = data.value?.copy(
                         loading = true,
-                    )
+                        screen = RecipeScreen.Loader,
+                        )
                 }
                 .doOnTerminate {
                     _data.value = data.value?.copy(
@@ -49,7 +47,8 @@ class RecipeViewModel @Inject constructor(
                 .subscribe(
                     {
                         _data.value = data.value?.copy(
-                            recipes = it.recipes
+                            recipes = it.recipes,
+                            screen = RecipeScreen.List,
                         )
                     },
                     {
@@ -59,4 +58,37 @@ class RecipeViewModel @Inject constructor(
         )
     }
 
+    fun getRecipeDetail(id: Int) {
+        disposables.add(
+            getRecipeDetailUseCase.execute(id)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnSubscribe {
+                    _data.value = data.value?.copy(
+                        loading = true,
+                        screen = RecipeScreen.Loader,
+                    )
+                }
+                .doOnTerminate {
+                    _data.value = data.value?.copy(
+                        loading = false,
+                    )
+                }
+                .subscribe(
+                    {
+                        _data.value = data.value?.copy(
+                            recipeDetail = RecipeDetailModel(
+                                title = it.title,
+                                image = it.image,
+                                summary = it.summary,
+                            ),
+                            screen = RecipeScreen.Detail,
+                        )
+                    },
+                    {
+                        Log.e("ERROR", "Error ${it.message}")
+                    }
+                )
+        )
+    }
 }

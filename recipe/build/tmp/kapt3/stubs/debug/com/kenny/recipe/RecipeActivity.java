@@ -2,7 +2,7 @@ package com.kenny.recipe;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.WindowCompat;
+import com.kenny.recipe.uimodels.RecipeScreen;
 import com.kenny.recipe.viewmodels.RecipeViewModel;
 import dagger.hilt.android.AndroidEntryPoint;
 
