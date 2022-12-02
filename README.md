@@ -28,7 +28,7 @@ También se implementa el patrón de diseño MVVM de la siguiente forma
 
 En este proyecto se presentaros dos dificultades:
 
-1. El manejo para inyectar las interfaces de los UseCases se intento realizando binding. Esto no funciono
-2. La librería Moshi no nos genero el JsonAdapter de nuestro modelo de respuesta del API
+1. El manejo para inyectar las interfaces de los UseCases se intento realizando binding. Esto no funciono. Se cambia el binding por la inyección normal y directa del UseCase 
+2. La librería Moshi no nos genero el JsonAdapter de nuestro modelo de respuesta del API. Se remplaza Moshi por la libreria Gson 
 
 
