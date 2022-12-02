@@ -7,7 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import com.kenny.components.compose.theme.RecipeTheme
+import com.kenny.recipe.components.LoaderView
+import com.kenny.recipe.components.RecipeDetail
 import com.kenny.recipe.components.RecipeList
+import com.kenny.recipe.uimodels.RecipeScreen
 import com.kenny.recipe.viewmodels.RecipeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,8 +26,24 @@ class RecipeActivity : AppCompatActivity() {
             val uiState by viewModel.data.observeAsState()
 
             RecipeTheme {
-                uiState?.let {
-                    RecipeList(uiState = it)
+                uiState?.let { it ->
+                    when (it.screen) {
+                        RecipeScreen.List -> {
+                            RecipeList(
+                                uiState = it,
+                                viewModel = viewModel,
+                            )
+                        }
+                        RecipeScreen.Detail -> {
+                            it.recipeDetail?.let { recipeDetail ->
+                                RecipeDetail(recipeModel = recipeDetail)
+                            }
+                        }
+                        RecipeScreen.Loader -> {
+                            LoaderView()
+                        }
+                    }
+
                 }
             }
 

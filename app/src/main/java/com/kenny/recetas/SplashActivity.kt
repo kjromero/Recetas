@@ -14,7 +14,7 @@ class SplashActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         lifecycleScope.launchWhenCreated {
-            delay(3000)
+            delay(1000)
 
             val intent = Intent(this@SplashActivity, RecipeActivity::class.java)
             startActivity(intent)
