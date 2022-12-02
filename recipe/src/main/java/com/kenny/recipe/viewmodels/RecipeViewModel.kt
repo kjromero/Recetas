@@ -1,5 +1,6 @@
 package com.kenny.recipe.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.kenny.components.viewmodel.BaseViewModel
@@ -52,7 +53,7 @@ class RecipeViewModel @Inject constructor(
                         )
                     },
                     {
-                        //handleError(" getRecipes", it)
+                        Log.e("ERROR", "Error ${it.message}")
                     }
                 )
         )
